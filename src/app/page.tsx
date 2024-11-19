@@ -10,7 +10,7 @@ export default function Home() {
       <header className="flex justify-center py-1 bg-sky-100" style={{width:'100%' }}>
         <div style = {{width:'100%' , position:'relative'}}  className="flex justify-center h-[50px]" > 
           <Image src={logo} alt={"loading ..."} className="w-[50px]" ></Image>
-          <h1 className="text-[40px] bg-sky-600 w-fit text-white text-bold px-2 flex justify-center items-center rounded-md">GO SOCIAL</h1>
+          <h1 className="text-[40px] bg-sky-600 w-fit text-white text-bold px-2 flex justify-center items-center rounded-md font-bold">GO SOCIAL</h1>
         </div>
       </header>
       <Footer/>
