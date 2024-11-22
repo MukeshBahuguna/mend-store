@@ -1,8 +1,7 @@
-import Footer from "@/components/Footer";
 import logo from '../assets/ggGif.gif'
 import Image from "next/image";
 import back from '../assets/backG.jpg'
-import text from '../assets/text.png'
+import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
   return (
@@ -13,7 +12,7 @@ export default function Home() {
             <Image src={logo} alt={"loading ..."} className="w-[50px] h-[48px]" ></Image>
             {/* <Image src={text} alt={"loading ..."} className="w-[10vw] bg-sky-600 rounded-md font-bold p-1" ></Image> */}
 
-            <h1 className="text-[38px] bg-sky-600 w-fit text-white text-bold px-2 flex justify-center items-center rounded-md font-bold">GO SOCIAL</h1>
+            <h1 className="text-[40px] w-fit text-white text-bold px-2 flex justify-center items-start rounded-md font-bold backImg">GO SOCIAL</h1>
           </div>
         </header>
         <Footer/>

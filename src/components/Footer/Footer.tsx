@@ -1,4 +1,4 @@
-import { Button } from 'antd'
+import { Button } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 
@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className="flex gap-6 flex-wrap items-center justify-center absolute bottom-0 right-0 bg-sky-100 text-sky-600 w-full py-1">
         <Button 
-          type='primary'
-          className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
+          className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center
+           hover:bg-[#ffffff] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
         >
           Read our docs
         </Button>

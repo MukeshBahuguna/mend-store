@@ -3,8 +3,41 @@
 @tailwind utilities;
 
 
+@font-face {
+  font-family: 'Cookie';
+  src: url('./fonts/Cookie/Cookie-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 nextjs-portal {
   display: none;
+}
+
+.backImg{
+  background: linear-gradient(
+    to right,
+    #7a53cd70 20%,
+    #00affa8f 30%,
+    #0190cd75 70%,
+    #754ada73 80%
+  );
+  /* -webkit-background-clip: text; */
+  /* background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+  /* text-fill-color: transparent; */
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+
+@keyframes textShine {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
 }
 
 /* :root {
@@ -18,9 +51,8 @@ nextjs-portal {
     --foreground: #ededed;
   }
 }
+*/
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-} */
+  font-family: 'Cookie', sans-serif;
+} 
