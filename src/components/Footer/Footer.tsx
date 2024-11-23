@@ -1,18 +1,23 @@
-import { Button } from '@mui/material'
+'use client'
+import { Button, useTheme } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 
 const Footer = () => {
+  const theme  =useTheme();
   return (
-    <footer className="flex gap-6 flex-wrap items-center justify-center absolute bottom-0 right-0 bg-sky-100 text-sky-600 w-full py-1">
+    <footer style={{fontSize : theme.typography.fontSize}} className="flex gap-2 flex-wrap items-center justify-center absolute bottom-0 right-0 bg-sky-100 text-sky-600 w-full py-1">
         <Button 
+          color='primary'
           className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center
-           hover:bg-[#ffffff] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
+           hover:bg-[#ffffff] hover:border-transparent px-4 sm:px-5"
         >
-          Read our docs
+          <a href="https://nextjs.org/docs">Read our docs</a>
+          
         </Button>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center
+           hover:bg-[#ffffff] hover:border-transparent px-4 sm:px-5 gap-2"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
@@ -28,7 +33,8 @@ const Footer = () => {
           Learn
         </a>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center
+           hover:bg-[#ffffff] hover:border-transparent px-4 sm:px-5 gap-2"
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
@@ -43,7 +49,8 @@ const Footer = () => {
           Examples
         </a>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center
+           hover:bg-[#ffffff] hover:border-transparent px-4 sm:px-5 gap-2"
           href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"

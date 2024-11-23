@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+*/
+
 @font-face {
   font-family: 'Cookie';
   src: url('./fonts/Cookie/Cookie-Regular.ttf');
@@ -40,19 +53,10 @@ nextjs-portal {
   }
 }
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-*/
-
-body {
+html {
   font-family: 'Cookie', sans-serif;
 } 
+
+.allChildrenDiv{
+  
+}

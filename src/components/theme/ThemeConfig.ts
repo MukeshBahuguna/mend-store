@@ -7,6 +7,8 @@ let theme = responsiveFontSizes(createTheme({
 
   typography: {
     fontFamily: 'var(--font-roboto)',
+    fontSize:24,
+    fontWeightBold : 'bold'
   },
 
   palette: {
