@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from "@/components/theme/ThemeConfig";
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
-import Background from "@/components/Background/Background";
+import { ThemeProvider } from "@/components/theme/theme-provider";
+import { ErrorBoundary } from "next/dist/client/components/error-boundary";
+import GlobalError from "./global-error";
+import Error from "./error";
+
 
 const geistSans = localFont({
   src: "./fonts/Mono/GeistVF.woff",
@@ -32,22 +31,23 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AppRouterCacheProvider options={{ key: 'css', enableCssLayer: true }}>
-          <ThemeProvider theme={theme}>
-            <div className="overflow-hidden relative h-screen">
-              <Navbar />
-              <Background/>
-              <div className={"allChildrenDiv"}>
-                {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+              <div className="overflow-hidden relative h-screen">
+                <div className={"allChildrenDiv"}>
+                  {children}
+                </div>
               </div>
-              <Footer />
-            </div>
+              
           </ThemeProvider>
-        </AppRouterCacheProvider>
       </body>
     </html>
   );
