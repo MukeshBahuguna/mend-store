@@ -2,10 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import { ErrorBoundary } from "next/dist/client/components/error-boundary";
-import GlobalError from "./global-error";
-import Error from "./error";
-
 
 const geistSans = localFont({
   src: "./fonts/Mono/GeistVF.woff",
@@ -20,8 +16,11 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "GO Social",
-  description: "A Social Media App",
+  title: {
+    template:'%s | MEND STORE',
+    default:'MEND STORE'
+  },
+  description:'MEND STORE'
 };
 
 export default function RootLayout({
@@ -42,9 +41,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
               <div className="overflow-hidden relative h-screen">
-                <div className={"allChildrenDiv"}>
                   {children}
-                </div>
               </div>
               
           </ThemeProvider>

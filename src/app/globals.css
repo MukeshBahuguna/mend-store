@@ -53,12 +53,10 @@ nextjs-portal {
   }
 }
 
-html {
+html, body{
   font-family: 'Cookie', sans-serif;
-} 
+  font-size: 22px;
 
-.allChildrenDiv{
-  
 } 
 
 @layer base {
