@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/components/SideMenu/app-sidebar"
+import style from './page.module.css'
+import { cookies } from "next/headers";
+
 
 const geistSans = localFont({
   src: "./fonts/Mono/GeistVF.woff",
@@ -23,11 +28,13 @@ export const metadata: Metadata = {
   description:'MEND STORE'
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies()
+  const defaultOpen = cookieStore.get("sidebar:state")?.value === "true"
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -40,10 +47,17 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-              <div className="overflow-hidden relative h-screen">
+            {/* <SidebarProvider className="sidebarProvider relative" defaultOpen={defaultOpen}>
+                <AppSidebar/>
+                <div className="flex flex-col">
+                  <SidebarTrigger className="h-[65px] "/>
+
+                </div> */}
+                <div className="overflow-hidden h-screen w-full relative">
                   {children}
-              </div>
-              
+                </div>
+                
+            {/* </SidebarProvider> */}
           </ThemeProvider>
       </body>
     </html>

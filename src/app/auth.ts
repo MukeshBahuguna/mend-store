@@ -41,10 +41,10 @@ const authOptions = {
           return null;
         }
       },
-      // credentials: {
-      //   username: { label: "Username", type: "text", placeholder: "Your Name" },
-      //   password: { label: "Password", type: "password" }
-      // },
+      credentials: {
+        email: { label: "Email", type: "email", placeholder: "Your e-mail" },
+        password: { label: "Password", type: "password" , placeholder: "Your password"}
+      },
     }),
     // CredentialsProvider({
     //   id: "social",

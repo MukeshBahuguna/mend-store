@@ -14,9 +14,9 @@ export default {
    },
   theme: {
   	extend: {
-		backgroundImage:{
-			'home': "url('/assets/images/home.jpg')",
-		},
+  		// backgroundImage: {
+  		// 	home: url('/assets/images/home.jpg')
+  		// },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -57,6 +57,16 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
+  			},
+  			sidebar: {
+  				DEFAULT: 'hsl(var(--sidebar-background))',
+  				foreground: 'hsl(var(--sidebar-foreground))',
+  				primary: 'hsl(var(--sidebar-primary))',
+  				'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+  				accent: 'hsl(var(--sidebar-accent))',
+  				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+  				border: 'hsl(var(--sidebar-border))',
+  				ring: 'hsl(var(--sidebar-ring))'
   			}
   		},
   		borderRadius: {
@@ -64,29 +74,28 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-		keyframes:{
-			"appear" : {
-				from :{
-					opacity : "0",
-				},
-				to :{
-					opacity: "1",
-				},
-			},
-			"slide" : {
-				from :{
-					"transform" : "translateX(100%)",
-				},
-				to:{
-					"transform" : "translateX(0%)",
-
-				}
-			},
-		},
-		animation :{
-			"appear": "appear 1s ease-in-out",
-			"slide" : "slide 350ms ease-in-out"
-		},
+  		keyframes: {
+  			'appear': {
+  				from: {
+  					opacity: '0'
+  				},
+  				to: {
+  					opacity: '1'
+  				}
+  			},
+  			'slide': {
+  				from: {
+  					'transform': 'translateX(100%)'
+  				},
+  				to: {
+  					'transform': 'translateX(0%)'
+  				}
+  			}
+  		},
+  		animation: {
+  			'appear': 'appear 1s ease-in-out',
+  			'slide': 'slide 350ms ease-in-out'
+  		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
