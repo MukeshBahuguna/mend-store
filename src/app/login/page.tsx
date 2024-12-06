@@ -31,9 +31,9 @@ const SignIn = () => {
         <CardContent >
             <LoginForm/>
         </CardContent>
-        <CardFooter className="flex justify-center">
+        {/* <CardFooter className="flex justify-center">
           <Label className="underline text-[16px]">Reset Password</Label>
-        </CardFooter>
+        </CardFooter> */}
       </Card>
 
     </div>
